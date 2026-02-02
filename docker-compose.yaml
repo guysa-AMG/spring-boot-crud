@@ -1,0 +1,28 @@
+services:
+  db:
+    image: bitnami/postgresql:latest
+    environment:
+      - POSTGRESQL_USERNAME=admin
+      - POSTGRESQL_PASSWORD=root
+      - POSTGRESQL_DATABASE=Info
+    ports:
+      - 5432:5432
+    networks:
+      - lan
+  spring_application:
+    depends_on:
+      - db
+    build: .
+    environment:
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/Info
+    - SPRING_DATASOURCE_USERNAME=admin
+    - SPRING_DATASOURCE_PASSWORD=root
+
+    networks:
+      - lan
+    ports:
+      - 8080:8080
+     
+networks:
+  lan:
+    driver: bridge
