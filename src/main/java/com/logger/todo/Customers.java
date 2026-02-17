@@ -21,7 +21,7 @@ private String surname;
 
 private String email;
 
-private Timestamp create_at;
+private Timestamp created_at;
 
 private Timestamp last_seen;
 
@@ -43,7 +43,7 @@ public void setSurname(String name){
 }
 
 public void setCreated(Timestamp t){
-    this.create_at=t;
+    this.created_at=t;
 }
 
 public void setLast(Timestamp t){
@@ -68,7 +68,7 @@ public String getSurname(){
 }
 
 public Timestamp getCreated(){
-    return this.create_at;
+    return this.created_at;
 }
 
 public Timestamp getLast(){
