@@ -31,14 +31,14 @@ public class CustomerController {
     };
 
     @DeleteMapping("/user/{id}")
-    public ResponseEntity<Void> remove(@PathVariable int id){
+    public ResponseEntity<Void> remove(@PathVariable long id){
         boolean successful =this.cs.removeCustomerById(id);
         if (successful){
             return new ResponseEntity<>(HttpStatus.ACCEPTED);
         }
         return new ResponseEntity<>(HttpStatus.FORBIDDEN);
     }
-    
+
 
     
 }

@@ -56,9 +56,9 @@ export class App {
           "Content-Type": "application/json",
         },
         body:JSON.stringify(
-                    {username:uname,
-                      lastname:usname,
-                      email:uemail})}).then((value)=>{this.loading.set(false);})
+                    {name:uname,
+                      surname:usname,
+                      email:uemail})}).finally(()=>{this.loading.set(false);})
 
 
   }

@@ -21,7 +21,7 @@ public class CustomersService {
         this.customerRepo.save(user);
     }
 
-    public boolean removeCustomerById(int id){
+    public boolean removeCustomerById(long id){
         this.customerRepo.removeById(id);
         return true;
     }
