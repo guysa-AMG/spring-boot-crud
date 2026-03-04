@@ -49,6 +49,8 @@ services:
       - spring_application
     ports:
       - 80:4200
+    volumes:
+      - src:./frontend
     networks:
       - lan
 
