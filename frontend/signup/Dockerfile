@@ -1,8 +1,8 @@
 FROM node:22
 
-COPY . frontend/
-
 WORKDIR frontend/
+
+COPY . .
 
 RUN npm i
 
