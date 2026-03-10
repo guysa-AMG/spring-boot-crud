@@ -1,4 +1,4 @@
-# Todo Application
+# CRUD Application
 
 This is a full-stack web application designed to manage a list of customers. The application provides a simple and effective way to register new customers and view the existing ones. The backend is built with Spring Boot, and the frontend is developed using Angular. The entire application is containerized using Docker for easy deployment and scalability.
 
