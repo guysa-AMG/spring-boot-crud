@@ -7,9 +7,9 @@ services:
   db:
     image: bitnami/postgresql:latest
     environment:
-      - POSTGRESQL_USERNAME=admin
-      - POSTGRESQL_PASSWORD=root
-      - POSTGRESQL_DATABASE=Info
+      - POSTGRESQL_USERNAME=${user}
+      - POSTGRESQL_PASSWORD=${password}
+      - POSTGRESQL_DATABASE=${Info}
     volumes:
       - pg_data:/var/lib/postgresql/data
     ports:
@@ -34,9 +34,9 @@ services:
       - db
     build: .
     environment:
-    - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/Info
-    - SPRING_DATASOURCE_USERNAME=admin
-    - SPRING_DATASOURCE_PASSWORD=root
+    - SPRING_DATASOURCE_URL=${connection_str}
+    - SPRING_DATASOURCE_USERNAME=${user}
+    - SPRING_DATASOURCE_PASSWORD=${password}
 
     networks:
       - lan
